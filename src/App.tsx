@@ -1,6 +1,8 @@
 import { ThemeProvider } from "@emotion/react";
 import { Container, CssBaseline, createTheme } from "@mui/material";
 import Auth from "./components/auth/Auth.component";
+import { RouterProvider } from "react-router-dom";
+import router from "./components/Routes";
 
 const darkTheme = createTheme({
   palette: {
@@ -13,7 +15,8 @@ const App = () => {
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
       <Container>
-        <Auth />
+        <RouterProvider router={router}/>
+
       </Container>
     </ThemeProvider>
   );
